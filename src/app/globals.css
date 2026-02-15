@@ -154,4 +154,8 @@
       );
     background-size: 13px 13px;
   }
+
+  .transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
 }
