@@ -1,0 +1,28 @@
+function Title({ label, wrapper }: { label: string; wrapper?: boolean }) {
+  return (
+    <article>
+      <h1 className="text-center text-[12vw] leading-[12vw] font-extrabold tracking-wider whitespace-nowrap uppercase">
+        {label}
+      </h1>
+
+      {wrapper && (
+        <div className="bg-foreground text-background flex items-center gap-6 p-4">
+          <h4 className="shrink-0 text-lg font-extrabold uppercase">
+            News Ticker+++
+          </h4>
+          <p className="shrink-0 opacity-90">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit +++
+          </p>
+          <p className="shrink-0 opacity-90">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit +++
+          </p>
+          <p className="shrink-0 opacity-90">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit +++
+          </p>
+        </div>
+      )}
+    </article>
+  );
+}
+
+export default Title;

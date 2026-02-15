@@ -1,3 +1,5 @@
+import { inter } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -13,7 +15,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className=" antialiased">{children}</body>
+      <body
+        className={cn("flex min-h-dvh flex-col antialiased", inter.className)}
+      >
+        <main className="container mx-auto flex-1 px-4 font-light sm:px-6 md:px-8">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }

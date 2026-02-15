@@ -125,4 +125,33 @@
     @apply bg-background text-foreground;
     @apply bg-background text-foreground;
   }
+
+  button {
+    @apply cursor-pointer;
+  }
+  img,
+  svg,
+  video {
+    @apply select-none;
+  }
+}
+
+@layer utilities {
+  .card-with-lines {
+    position: relative;
+    background-color: var(--color-background);
+
+    background-image:
+      linear-gradient(
+        to right,
+        oklch(70.216% 0.18922 22.207 / 0.3) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        oklch(70.216% 0.18922 22.207 / 0.3) 1px,
+        transparent 1px
+      );
+    background-size: 13px 13px;
+  }
 }
