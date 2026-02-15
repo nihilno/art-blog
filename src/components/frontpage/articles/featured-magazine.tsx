@@ -6,7 +6,7 @@ import Newsletter from "./newsletter";
 
 function FeaturedMagazine() {
   return (
-    <div className="space-y-8">
+    <aside className="space-y-8">
       <>
         <span className="font-bold uppercase">Printmagazine</span>
         <h3 className="mt-2.5 text-4xl font-bold">
@@ -25,7 +25,7 @@ function FeaturedMagazine() {
 
       <MostPopular />
       <Newsletter />
-    </div>
+    </aside>
   );
 }
 
