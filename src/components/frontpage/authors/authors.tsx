@@ -6,7 +6,7 @@ function Authors() {
     <section className="border-foreground border-t">
       <Subtitle title="Authors" href="/" linkLabel="All authors" />
 
-      <section className="border-foreground mt-24 grid grid-cols-2 divide-x divide-y border">
+      <section className="border-foreground divide-foreground mt-24 grid grid-cols-2 divide-x divide-y border">
         {Array.from({ length: 6 }).map((_, i) => (
           <Author key={i} />
         ))}

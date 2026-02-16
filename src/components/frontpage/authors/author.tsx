@@ -2,8 +2,8 @@ import Image from "next/image";
 
 function Author() {
   return (
-    <div className="border-foreground flex items-center gap-10 p-8">
-      <div className="relative aspect-square size-[150px]">
+    <div className="flex items-center gap-10 p-8">
+      <div className="relative aspect-square w-[150px]">
         <Image
           src={`/sample/authors/author-1.png`}
           alt={`Author`}

@@ -1,3 +1,5 @@
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import Providers from "@/components/providers";
 import { inter } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
@@ -20,9 +22,11 @@ export default function RootLayout({
         className={cn("flex min-h-dvh flex-col antialiased", inter.className)}
       >
         <Providers>
-          <main className="container mx-auto flex-1 px-4 font-light sm:px-6 md:px-8">
+          <Header />
+          <main className="container mx-auto flex-1 font-light">
             {children}
           </main>
+          <Footer />
         </Providers>
       </body>
     </html>
