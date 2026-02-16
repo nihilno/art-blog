@@ -4,7 +4,7 @@ import React from "react";
 
 function Podcast({ index }: { index: number }) {
   return (
-    <div className="border-foreground space-y-8 p-10">
+    <div className="border-foreground space-y-8 border p-10">
       <div className="relative aspect-square">
         <Image
           src={`/sample/podcasts/podcast-${index + 1}.png`}

@@ -5,7 +5,7 @@ import React from "react";
 
 function Magazine() {
   return (
-    <section className="flex flex-col items-center px-10 pb-12">
+    <section className="border-foreground flex flex-col items-center border px-10 pb-12">
       <div className="flex w-full items-center justify-between gap-1 py-10">
         <p>{format(new Date(), "d. MMMM yyyy")}</p>
         <Label label="Art" />
@@ -32,7 +32,7 @@ function Magazine() {
           </p>
         </div>
 
-        <section className="mt-auto flex justify-between">
+        <section className="flex justify-between">
           <ul className="flex items-center gap-8">
             <li>
               <span className="mr-1.5 font-bold">Text</span> Jakob Polowy
