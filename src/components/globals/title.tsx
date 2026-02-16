@@ -1,7 +1,7 @@
 function Title({ label, wrapper }: { label: string; wrapper?: boolean }) {
   return (
     <article>
-      <h1 className="text-center text-[12vw] leading-[14vw] font-extrabold whitespace-nowrap">
+      <h1 className="text-center text-[12vw] leading-[14vw] font-extrabold whitespace-nowrap select-none">
         {label}
       </h1>
 

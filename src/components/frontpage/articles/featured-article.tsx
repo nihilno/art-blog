@@ -39,7 +39,7 @@ function FeaturedArticle() {
               </li>
             </ul>
 
-            <Label />
+            <Label label="Art" />
           </section>
           <LinkBtn href="#">Read More</LinkBtn>
         </div>
