@@ -1,6 +1,6 @@
+import Button from "@/components/globals/button";
 import { format } from "date-fns";
 import Image from "next/image";
-import Button from "../../globals/button";
 import MostPopular from "./most-popular";
 import Newsletter from "./newsletter";
 

@@ -4,7 +4,7 @@ import React from "react";
 
 function Podcast({ index }: { index: number }) {
   return (
-    <div className="border-foreground space-y-8 border-l p-10">
+    <div className="border-foreground space-y-8 p-10">
       <div className="relative aspect-square">
         <Image
           src={`/sample/podcasts/podcast-${index + 1}.png`}
@@ -18,7 +18,7 @@ function Podcast({ index }: { index: number }) {
       </h4>
       <ul className="mt-12 flex gap-8">
         <li className="text-sm">
-          <span className="font-semibold">Date</span>&nbsp;{" "}
+          <span className="font-semibold">Date</span>&nbsp;
           {format(new Date(), "dd MMMM yyyy")}
         </li>
         <li className="text-sm">

@@ -134,6 +134,16 @@
   video {
     @apply select-none;
   }
+  h1,
+  h2,
+  h3 {
+    @apply tracking-wider uppercase;
+  }
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
 }
 
 @layer utilities {

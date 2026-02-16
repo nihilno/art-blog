@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 function MostPopular() {
   return (
     <section className="mt-12">
-      <h4 className="font-bold uppercase">Most Popular</h4>
+      <h4 className="uppercase">Most Popular</h4>
       <ul className="mt-6 space-y-6">
         {Array.from({ length: 3 }).map((_, index) => (
           <PopularItem
@@ -32,7 +32,7 @@ function PopularItem({
         {index < 9 ? `0${index + 1}` : index + 1}
       </span>
       <div className="space-y-2">
-        <h4 className="text-lg font-bold">Street art festival</h4>
+        <h4 className="text-lg">Street art festival</h4>
         <p className="text-sm">
           <span className="mr-1.5 font-bold">Text</span> Maciej Polowy
         </p>
