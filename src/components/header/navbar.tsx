@@ -21,10 +21,7 @@ function Navbar() {
         {LINKS.map(({ label, href }) => (
           <li
             key={href}
-            className={cn(
-              pathname === href ? "underline" : "",
-              "hover:underline",
-            )}
+            className={cn(pathname.startsWith(href) ? "underline" : "")}
           >
             <Link href={href} aria-label={label}>
               {label}

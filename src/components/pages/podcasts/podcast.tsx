@@ -19,7 +19,7 @@ function Podcast({ index }: { index: number }) {
       <div className="relative size-60 shrink-0">
         <Image
           src="/sample/featured-blog.png"
-          alt="Pocast Cover"
+          alt="Podcast Cover"
           fill
           className="object-cover"
           priority={true}
@@ -39,7 +39,7 @@ function Podcast({ index }: { index: number }) {
             <li>
               <span className="mr-1.5 font-bold">Duration</span> 1h 20 Min
             </li>
-            <LinkBtn href="/">Listen</LinkBtn>
+            <LinkBtn href={`/podcasts/${index}`}>Listen</LinkBtn>
           </ul>
         </section>
       </article>
