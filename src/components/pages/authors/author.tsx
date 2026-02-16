@@ -34,7 +34,7 @@ function Author({ index }: { index: number }) {
             <li>
               <span className="mr-1.5 font-bold">City</span> Berlin
             </li>
-            <LinkBtn href="/">About</LinkBtn>
+            <LinkBtn href={`/authors/${index}`}>About</LinkBtn>
           </ul>
         </section>
       </article>
