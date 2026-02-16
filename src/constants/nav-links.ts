@@ -12,3 +12,15 @@ export const SOCIAL_LINKS = [
   { label: "YouTube", icon: Youtube },
   { label: "Connect", icon: Wifi },
 ];
+
+export const FOOTER_LINKS = [
+  "Art",
+  "Design",
+  "Architecture",
+  "Magazine",
+  "Podcast",
+  "Authors",
+  "Style guide",
+  "Licensing",
+  "Change log",
+];

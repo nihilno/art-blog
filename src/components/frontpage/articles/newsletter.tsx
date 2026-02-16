@@ -9,24 +9,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { NewsletterSchema, NewsletterType } from "@/schemas/newsletter";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { toast } from "sonner";
+import { useNewsletter } from "@/hooks/use-newsletter";
 
 function Newsletter() {
-  const form = useForm<NewsletterType>({
-    defaultValues: {
-      email: "",
-    },
-    resolver: zodResolver(NewsletterSchema),
-    mode: "onBlur",
-  });
-
-  function onSubmit(formData: NewsletterType) {
-    toast.success("Subscribed to newsletter!");
-    form.reset();
-  }
+  const { form, onSubmit } = useNewsletter();
 
   return (
     <Form {...form}>

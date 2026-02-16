@@ -1,6 +1,7 @@
+import Label from "@/components/globals/label";
+import LinkBtn from "@/components/globals/link";
 import { format } from "date-fns";
 import Image from "next/image";
-import Label from "../../globals/label";
 
 function FeaturedArticle() {
   return (
@@ -9,13 +10,18 @@ function FeaturedArticle() {
         <h2 className="text-[5vw] leading-none font-bold uppercase">
           Don&apos;t close your eyes
         </h2>
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-between gap-2">
           {/* blog description */}
-          <p className="font-light">
+          <p className="line-clamp-4 font-light">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
             corporis animi, sapiente minima aperiam magni enim dolores veniam,
             sunt nostrum esse reiciendis porro minus voluptatibus, maiores autem
-            sit tempore odit.
+            sit tempore odit. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Necessitatibus vitae quibusdam ducimus. Quasi quo
+            necessitatibus, nesciunt odio est error ducimus? Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Asperiores, perspiciatis
+            quos. Expedita reiciendis rerum similique. Saepe ea laudantium eos?
+            Non.
           </p>
 
           <section className="mt-auto flex justify-between">
@@ -27,9 +33,7 @@ function FeaturedArticle() {
                 <span className="mr-1.5 font-bold">Date</span>{" "}
                 {format(new Date(), "d. MMMM yyyy")}
               </li>
-              <li>
-                <span className="mr-1.5 font-bold">Button</span>
-              </li>
+
               <li>
                 <span className="mr-1.5 font-bold">Duration</span> 1 Min
               </li>
@@ -37,6 +41,7 @@ function FeaturedArticle() {
 
             <Label />
           </section>
+          <LinkBtn href="#">Read More</LinkBtn>
         </div>
       </article>
 

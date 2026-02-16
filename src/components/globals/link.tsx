@@ -14,7 +14,7 @@ function LinkBtn({
   return (
     <Link
       className={cn(
-        "group flex items-center gap-2 font-bold uppercase",
+        "group flex w-fit items-center gap-2 font-bold uppercase",
         className,
       )}
       href={href}
