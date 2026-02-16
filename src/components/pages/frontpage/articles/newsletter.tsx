@@ -20,10 +20,10 @@ function Newsletter() {
         onSubmit={form.handleSubmit(onSubmit)}
         className="bg-muted mt-24 flex flex-col items-start space-y-4 p-8"
       >
-        <h4 className="font-bold uppercase">Newsletter</h4>
-        <h2 className="max-w-[14ch] text-3xl font-bold">
+        <p className="font-bold uppercase">Newsletter</p>
+        <h3 className="max-w-[14ch] text-3xl font-bold">
           Design News to your inbox
-        </h2>
+        </h3>
         <FormField
           name="email"
           control={form.control}
@@ -34,6 +34,7 @@ function Newsletter() {
                   placeholder="Email"
                   {...field}
                   aria-invalid={fieldState.invalid}
+                  aria-label="Email address"
                 />
               </FormControl>
               <FormMessage />

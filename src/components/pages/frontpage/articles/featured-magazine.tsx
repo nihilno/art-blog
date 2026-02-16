@@ -20,7 +20,7 @@ function FeaturedMagazine() {
           width={300}
           height={400}
         />
-        <Button>Button</Button>
+        <Button>Check</Button>
       </div>
 
       <MostPopular />

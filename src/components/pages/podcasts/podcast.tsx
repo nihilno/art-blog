@@ -19,7 +19,7 @@ function Podcast({ index }: { index: number }) {
       <div className="relative size-60 shrink-0">
         <Image
           src="/sample/featured-blog.png"
-          alt="Featured Blog"
+          alt="Pocast Cover"
           fill
           className="object-cover"
           priority={true}

@@ -6,7 +6,7 @@ function Author() {
       <div className="relative aspect-square w-[150px]">
         <Image
           src={`/sample/authors/author-1.png`}
-          alt={`Author`}
+          alt="Louise Jensen"
           fill
           className="object-contain"
         />
