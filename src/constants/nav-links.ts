@@ -2,8 +2,8 @@ import { Instagram, Twitter, Wifi, Youtube } from "lucide-react";
 
 export const LINKS = [
   { label: "Magazines", href: "/magazines" },
-  { label: "Authors", href: "/authors" },
   { label: "Podcasts", href: "/podcasts" },
+  { label: "Authors", href: "/authors" },
 ];
 
 export const SOCIAL_LINKS = [

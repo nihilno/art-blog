@@ -1,5 +1,11 @@
 import Title from "@/components/globals/title";
+import Authors from "@/components/pages/authors/authors";
 
 export default function AuthorPage() {
-  return <Title label="Authors" />;
+  return (
+    <section>
+      <Title label="Authors" />
+      <Authors />
+    </section>
+  );
 }
