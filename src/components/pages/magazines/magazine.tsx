@@ -1,14 +1,21 @@
 import Label from "@/components/globals/label";
 import { format } from "date-fns";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function Magazine() {
   return (
-    <section className="border-foreground flex flex-col items-center border px-10 pb-12">
+    <Link
+      href="/magazines/1"
+      className="border-foreground group flex flex-col items-center border px-10 pb-12 transition hover:-translate-y-4"
+    >
       <div className="flex w-full items-center justify-between gap-1 py-10">
         <p>{format(new Date(), "d. MMMM yyyy")}</p>
-        <Label label="Art" />
+        <Label
+          label="Art"
+          className="group-hover:bg-foreground group-hover:text-background"
+        />
       </div>
 
       <Image
@@ -16,7 +23,7 @@ function Magazine() {
         alt="Featured Blog"
         width={400}
         height={400}
-        className="aspect-square w-full border object-cover"
+        className="aspect-square w-full border object-cover transition group-hover:scale-102 group-hover:shadow-xl group-hover:brightness-110 group-hover:contrast-110"
         priority={true}
       />
       <article className="mt-8 space-y-8">
@@ -43,7 +50,7 @@ function Magazine() {
           </ul>
         </section>
       </article>
-    </section>
+    </Link>
   );
 }
 

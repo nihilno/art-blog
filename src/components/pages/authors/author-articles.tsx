@@ -1,4 +1,4 @@
-import Article from "@/components/pages/frontpage/articles/article";
+import Article from "@/components/pages/frontpage/magazine/magazine";
 
 function AuthorArticles() {
   return (

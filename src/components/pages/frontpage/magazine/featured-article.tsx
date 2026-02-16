@@ -4,7 +4,7 @@ import Image from "next/image";
 import MostPopular from "./most-popular";
 import Newsletter from "./newsletter";
 
-function FeaturedMagazine() {
+function FeaturedArticle() {
   return (
     <aside className="space-y-8">
       <>
@@ -29,4 +29,4 @@ function FeaturedMagazine() {
   );
 }
 
-export default FeaturedMagazine;
+export default FeaturedArticle;

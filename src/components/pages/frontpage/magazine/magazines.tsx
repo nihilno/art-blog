@@ -1,7 +1,7 @@
 import LinkBtn from "@/components/globals/link";
-import Article from "./article";
+import Article from "./magazine";
 
-function Articles() {
+function Magazines() {
   return (
     <section className="border-foreground flex flex-col gap-12 pb-16">
       {Array.from({ length: 6 }).map((_, i) => {
@@ -9,11 +9,11 @@ function Articles() {
         return <Article key={i} isLast={isLast} />;
       })}
 
-      <LinkBtn href="/" className="mt-4">
+      <LinkBtn href="/magazines" className="mt-4">
         All articles
       </LinkBtn>
     </section>
   );
 }
 
-export default Articles;
+export default Magazines;

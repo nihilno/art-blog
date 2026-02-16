@@ -2,9 +2,10 @@ import Label from "@/components/globals/label";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-function Article({
+function Magazine({
   className,
   isLast = false,
   type = "regular",
@@ -14,9 +15,10 @@ function Article({
   type?: "regular" | "compact";
 }) {
   return (
-    <section
+    <Link
+      href={`/magazines/1`}
       className={cn(
-        "border-foreground relative flex space-x-16",
+        "border-foreground group relative flex space-x-16 transition hover:-translate-1",
         type === "regular" && !isLast && "border-b pb-12",
         type === "compact" && "border p-6",
         className,
@@ -24,7 +26,7 @@ function Article({
     >
       <div
         className={cn(
-          "relative size-60 shrink-0",
+          "relative size-60 shrink-0 transition group-hover:scale-105 group-hover:shadow-xl",
           type === "compact" && "size-37.5",
         )}
       >
@@ -73,11 +75,16 @@ function Article({
             </li>
           </ul>
 
-          {type === "regular" && <Label label="Art" />}
+          {type === "regular" && (
+            <Label
+              label="Art"
+              className="group-hover:bg-foreground group-hover:text-background"
+            />
+          )}
         </section>
       </article>
-    </section>
+    </Link>
   );
 }
 
-export default React.memo(Article);
+export default React.memo(Magazine);

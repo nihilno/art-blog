@@ -1,8 +1,8 @@
-import Content from "@/components/pages/frontpage/articles/content";
-import FeaturedArticle from "@/components/pages/frontpage/articles/featured-article";
-import Authors from "@/components/pages/frontpage/authors/authors";
-import Podcasts from "@/components/pages/frontpage/podcasts/podcasts";
 import Title from "@/components/globals/title";
+import Authors from "@/components/pages/frontpage/authors/authors";
+import Content from "@/components/pages/frontpage/magazine/content";
+import FeaturedArticle from "@/components/pages/frontpage/magazine/hero-article";
+import Podcasts from "@/components/pages/frontpage/podcasts/podcasts";
 
 export default function FrontPage() {
   return (

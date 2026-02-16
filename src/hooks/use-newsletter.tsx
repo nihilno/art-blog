@@ -9,7 +9,6 @@ export function useNewsletter() {
       email: "",
     },
     resolver: zodResolver(NewsletterSchema),
-    mode: "onBlur",
   });
 
   function onSubmit(formData: NewsletterType) {

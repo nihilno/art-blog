@@ -13,7 +13,7 @@ export default async function PodcastPage({
     <section className="space-y-24">
       <GoBack label="Podcast" />
       <PodcastProfile />
-      <Latest />
+      <Latest label="Latest Episodes" type="podcast" href="/podcasts" />
     </section>
   );
 }

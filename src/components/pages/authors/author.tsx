@@ -1,14 +1,16 @@
-import LinkBtn from "@/components/globals/link";
 import { cn } from "@/lib/utils";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 function Author({ index }: { index: number }) {
   const isLast = index === 5;
 
   return (
-    <section
+    <Link
+      href="/authors/1"
       className={cn(
-        "border-foreground relative flex items-center space-x-16",
+        "border-foreground group relative flex items-center space-x-16 transition hover:translate-x-2",
         !isLast && "border-b pb-12",
       )}
     >
@@ -34,11 +36,17 @@ function Author({ index }: { index: number }) {
             <li>
               <span className="mr-1.5 font-bold">City</span> Berlin
             </li>
-            <LinkBtn href={`/authors/${index}`}>About</LinkBtn>
+            <span className="group flex w-fit items-center gap-2 font-bold uppercase">
+              <span className="tracking-wider group-hover:underline">
+                About
+              </span>
+              &nbsp;
+              <ArrowRight className="size-5 transition group-hover:translate-x-4" />
+            </span>
           </ul>
         </section>
       </article>
-    </section>
+    </Link>
   );
 }
 

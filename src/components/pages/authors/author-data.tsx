@@ -14,13 +14,13 @@ function AuthorData() {
         <h4 className="uppercase">Follow</h4>
         <ul className="flex items-center gap-2">
           <li>
-            <Instagram className="size-4.5" />
+            <Instagram className="size-4.5" aria-label="Follow on Instagram" />
           </li>
           <li>
-            <Twitter className="size-4.5" />
+            <Twitter className="size-4.5" aria-label="Follow on Twitter" />
           </li>
           <li>
-            <Youtube className="size-4.5" />
+            <Youtube className="size-4.5" aria-label="Follow on Youtube" />
           </li>
         </ul>
       </div>

@@ -23,7 +23,7 @@ export default function RootLayout({
       >
         <Providers>
           <Header />
-          <main className="container mx-auto flex-1 font-light">
+          <main className="relative container mx-auto flex-1 font-light">
             {children}
           </main>
           <Footer />

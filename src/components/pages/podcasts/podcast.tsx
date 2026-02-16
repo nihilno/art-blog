@@ -1,22 +1,24 @@
-import LinkBtn from "@/components/globals/link";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function Podcast({ index }: { index: number }) {
   const isLast = index === 4;
 
   return (
-    <section
+    <Link
+      href="/podcasts/1"
       className={cn(
-        "border-foreground relative flex items-center space-x-16",
+        "border-foreground group relative flex items-center space-x-16 transition hover:-translate-1",
         !isLast && "border-b pb-12",
       )}
     >
       <h4 className="text-xl">{index < 10 ? `0${index + 1}` : index + 1}</h4>
 
-      <div className="relative size-60 shrink-0">
+      <div className="relative size-60 shrink-0 transition group-hover:scale-105 group-hover:shadow-xl">
         <Image
           src="/sample/featured-blog.png"
           alt="Podcast Cover"
@@ -39,11 +41,21 @@ function Podcast({ index }: { index: number }) {
             <li>
               <span className="mr-1.5 font-bold">Duration</span> 1h 20 Min
             </li>
-            <LinkBtn href={`/podcasts/${index}`}>Listen</LinkBtn>
+
+            <span
+              className={cn(
+                "flex w-fit items-center gap-2 font-bold uppercase",
+              )}
+            >
+              Listen
+              <span className="tracking-wider group-hover:underline"></span>
+              &nbsp;
+              <ArrowRight className="size-5 transition group-hover:translate-x-4" />
+            </span>
           </ul>
         </section>
       </article>
-    </section>
+    </Link>
   );
 }
 

@@ -3,7 +3,7 @@ import LinkBtn from "@/components/globals/link";
 import { format } from "date-fns";
 import Image from "next/image";
 
-function FeaturedArticle() {
+function HeroArticle() {
   return (
     <section className="space-y-8">
       <article className="mt-16 grid grid-cols-1 gap-2 md:grid-cols-2">
@@ -41,7 +41,7 @@ function FeaturedArticle() {
 
             <Label label="Art" />
           </section>
-          <LinkBtn href="#">Read More</LinkBtn>
+          <LinkBtn href={`/magazines/${1}`}>Read More</LinkBtn>
         </div>
       </article>
 
@@ -58,4 +58,4 @@ function FeaturedArticle() {
   );
 }
 
-export default FeaturedArticle;
+export default HeroArticle;

@@ -1,8 +1,13 @@
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 function Author() {
   return (
-    <div className="border-foreground flex items-center gap-10 border p-8">
+    <Link
+      href="/authors/1"
+      className="border-foreground hover:bg-foreground/5 group relative flex items-center gap-10 border p-8 transition"
+    >
       <div className="relative aspect-square w-[150px]">
         <Image
           src={`/sample/authors/author-1.png`}
@@ -22,7 +27,8 @@ function Author() {
           </li>
         </ul>
       </article>
-    </div>
+      <ArrowUpRight className="absolute right-8 bottom-8 size-8! transition group-hover:size-12! group-hover:translate-x-4" />
+    </Link>
   );
 }
 
