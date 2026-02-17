@@ -6,7 +6,7 @@ function Logo({ variant = "default" }: { variant?: "default" | "secondary" }) {
     <Link
       href="/"
       className={cn(
-        "text-sm font-extrabold uppercase md:text-base",
+        "font-extrabold uppercase md:text-base",
         variant === "secondary" ? "text-background" : "text-foreground",
       )}
     >

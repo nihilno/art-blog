@@ -15,7 +15,7 @@ function Author({ index }: { index: number }) {
         !isLast && "border-b pb-12",
       )}
     >
-      <div className="relative size-[150px] shrink-0">
+      <div className="relative size-15 shrink-0 md:size-[150px]">
         <Image
           src="/sample/authors/author-1.png"
           alt="Featured Blog"
@@ -24,14 +24,14 @@ function Author({ index }: { index: number }) {
           priority={true}
         />
       </div>
-      <article className="flex w-full items-center justify-between">
-        <h2 className="line-clamp-2 max-w-[22ch] text-3xl font-bold capitalize">
+      <article className="flex w-full flex-col justify-between gap-4 md:flex-row md:items-center">
+        <h2 className="line-clamp-2 max-w-[22ch] text-2xl font-bold capitalize md:text-3xl">
           Lorem, ipsum.
         </h2>
 
         <section className="flex justify-between gap-8">
           <List type="author" />
-          <span className="flex w-fit items-center gap-2 font-bold uppercase">
+          <span className="flex hidden w-fit items-center gap-2 font-bold uppercase md:block">
             <span className="tracking-wider group-hover:underline">About</span>
             &nbsp;
             <ArrowRight className="size-5 transition group-hover:translate-x-4" />

@@ -11,7 +11,7 @@ export default function FrontPage() {
       <FeaturedArticle />
       <Content />
 
-      <div className="space-y-48">
+      <div className="mt-24 space-y-24 md:mt-0 md:space-y-48">
         <Podcasts />
         <Authors />
       </div>

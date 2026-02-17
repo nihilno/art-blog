@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="bg-foreground text-background mt-32">
       <Wrapper />
-      <section className="mt-32 space-y-32 px-24 pb-8">
+      <section className="mt-16 space-y-32 px-6 pb-8 md:mt-32 md:px-24">
         <Newsletter />
         <Links />
         <Socials />

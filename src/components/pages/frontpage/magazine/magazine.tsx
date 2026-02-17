@@ -18,7 +18,7 @@ function Magazine({
     <Link
       href={`/magazines/1`}
       className={cn(
-        "border-foreground group relative flex space-x-16 transition hover:-translate-1",
+        "border-foreground group relative flex flex-col gap-16 transition hover:-translate-1 lg:flex-row",
         type === "regular" && !isLast && "border-b pb-12",
         type === "compact" && "border p-6",
         className,
@@ -26,7 +26,7 @@ function Magazine({
     >
       <div
         className={cn(
-          "relative size-60 shrink-0 transition group-hover:scale-105 group-hover:shadow-xl",
+          "relative size-60 shrink-0 place-self-center transition group-hover:scale-105 group-hover:shadow-xl",
           type === "compact" && "size-37.5",
         )}
       >
@@ -40,7 +40,7 @@ function Magazine({
       </div>
       <article
         className={cn(
-          "border-foreground flex flex-col pr-4",
+          "border-foreground flex flex-col gap-8 pr-4 lg:gap-0",
           type === "compact" && "my-auto h-fit gap-4",
         )}
       >
@@ -49,7 +49,7 @@ function Magazine({
             Don&apos;t close your eyes
           </h2>
           {type === "regular" && (
-            <p className="line-clamp-4 font-light">
+            <p className="line-clamp-4 text-sm font-light md:text-base">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
               corporis animi, sapiente minima aperiam magni enim dolores veniam,
               sunt nostrum esse reiciendis porro minus voluptatibus, maiores

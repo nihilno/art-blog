@@ -5,7 +5,7 @@ function Socials() {
   const now = format(new Date(), "yyyy");
 
   return (
-    <section className="flex items-center justify-between">
+    <section className="flex flex-col items-center justify-between gap-2 text-center md:flex-row md:text-left">
       <p className="text-background/80 text-sm">
         &copy; {now} Made by&nbsp;
         <span className="text-background">Maciej Polowy</span> &mdash; Powered

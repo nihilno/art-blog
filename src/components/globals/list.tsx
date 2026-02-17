@@ -11,26 +11,31 @@ function List({
   compact?: boolean;
 }) {
   return (
-    <ul className={cn("flex items-center gap-8", size === "sm" && "text-sm")}>
+    <ul
+      className={cn(
+        "flex flex-col gap-2 md:flex-row md:items-center md:gap-8",
+        size === "sm" && "text-sm",
+      )}
+    >
       {type === "author" ? (
         <>
           <li>
-            <span className="mr-1.5 font-bold">Job</span> Artist
+            <span className="mr-1.5 font-bold">Job</span>Artist
           </li>
           <li>
-            <span className="mr-1.5 font-bold">City</span> Berlin
+            <span className="mr-1.5 font-bold">City</span>Berlin
           </li>
         </>
       ) : (
         <>
           {type === "magazine" && (
             <li>
-              <span className="mr-1.5 font-bold">Text</span> Jakob Polowy
+              <span className="mr-1.5 font-bold">Text</span>Jakob Polowy
             </li>
           )}
           {!compact && (
             <li>
-              <span className="mr-1.5 font-bold">Date</span>{" "}
+              <span className="mr-1.5 font-bold">Date</span>
               {format(new Date(), "d. MMMM yyyy")}
             </li>
           )}
@@ -38,7 +43,7 @@ function List({
           <li>
             <span className="mr-1.5 font-bold">
               {type === "podcast" ? "Duration" : "Read"}
-            </span>{" "}
+            </span>
             1 Min
           </li>
         </>

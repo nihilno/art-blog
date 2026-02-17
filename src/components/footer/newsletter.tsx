@@ -19,9 +19,9 @@ function Newsletter() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex items-center justify-between"
+        className="flex flex-col justify-between gap-6 lg:flex-row lg:items-center"
       >
-        <h2 className="text-6xl font-extrabold">
+        <h2 className="text-2xl font-extrabold md:text-4xl lg:text-6xl">
           Design news to <br /> your inbox
         </h2>
         <div className="flex items-center gap-2">
@@ -41,7 +41,12 @@ function Newsletter() {
               </FormItem>
             )}
           />
-          <Button type="submit" className="self-end" disabled={isLoading}>
+          <Button
+            type="submit"
+            className="self-end"
+            disabled={isLoading}
+            variant="secondary"
+          >
             {isLoading ? (
               <Loader2 className="size-4 animate-spin" />
             ) : (
