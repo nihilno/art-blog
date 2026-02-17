@@ -30,7 +30,7 @@ function Author({ index }: { index: number }) {
         </h2>
 
         <section className="flex justify-between gap-8">
-          <List />
+          <List type="author" />
           <span className="flex w-fit items-center gap-2 font-bold uppercase">
             <span className="tracking-wider group-hover:underline">About</span>
             &nbsp;

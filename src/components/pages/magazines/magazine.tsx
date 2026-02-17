@@ -41,7 +41,7 @@ function Magazine() {
         </div>
 
         <section className="flex justify-between">
-          <List />
+          <List size="sm" compact={true} />
         </section>
       </article>
     </Link>

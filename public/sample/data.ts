@@ -38,7 +38,7 @@ export const data = [
         id: 1,
         type: "article",
         image: "/public/sample/articles/image-3.png",
-        featued_image: "/public/sample/articles/hero-article-1.png",
+        featured_image: "/public/sample/articles/hero-article-1.png",
         title: "10 Art Techniques to Try This Year",
         description:
           "A short guide to experimenting with new art styles and techniques.",
@@ -71,7 +71,7 @@ export const data = [
         id: 3,
         type: "article",
         image: "/public/sample/articles/image-4.png",
-        featued_image: "/public/sample/articles/hero-article-2.png",
+        featured_image: "/public/sample/articles/hero-article-2.png",
         title: "Top Design Trends for 2026",
         description: "Discover what’s shaping the design world in 2026.",
         textContent:

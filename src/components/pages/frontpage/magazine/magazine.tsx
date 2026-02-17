@@ -59,7 +59,7 @@ function Magazine({
         </div>
 
         <section className="mt-auto flex justify-between">
-          <List />
+          <List size="sm" />
 
           {type === "regular" && (
             <Label

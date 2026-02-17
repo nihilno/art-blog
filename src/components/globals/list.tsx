@@ -1,19 +1,48 @@
+import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 
-function List() {
+function List({
+  type = "magazine",
+  size = "base",
+  compact = false,
+}: {
+  type?: "magazine" | "podcast" | "author";
+  size?: "sm" | "base";
+  compact?: boolean;
+}) {
   return (
-    <ul className="flex items-center gap-8">
-      <li>
-        <span className="mr-1.5 font-bold">Text</span> Jakob Polowy
-      </li>
-      <li>
-        <span className="mr-1.5 font-bold">Date</span>{" "}
-        {format(new Date(), "d. MMMM yyyy")}
-      </li>
+    <ul className={cn("flex items-center gap-8", size === "sm" && "text-sm")}>
+      {type === "author" ? (
+        <>
+          <li>
+            <span className="mr-1.5 font-bold">Job</span> Artist
+          </li>
+          <li>
+            <span className="mr-1.5 font-bold">City</span> Berlin
+          </li>
+        </>
+      ) : (
+        <>
+          {type === "magazine" && (
+            <li>
+              <span className="mr-1.5 font-bold">Text</span> Jakob Polowy
+            </li>
+          )}
+          {!compact && (
+            <li>
+              <span className="mr-1.5 font-bold">Date</span>{" "}
+              {format(new Date(), "d. MMMM yyyy")}
+            </li>
+          )}
 
-      <li>
-        <span className="mr-1.5 font-bold">Duration</span> 1 Min
-      </li>
+          <li>
+            <span className="mr-1.5 font-bold">
+              {type === "podcast" ? "Duration" : "Read"}
+            </span>{" "}
+            1 Min
+          </li>
+        </>
+      )}
     </ul>
   );
 }

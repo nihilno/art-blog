@@ -20,7 +20,7 @@ function Podcast({ index }: { index: number }) {
       <h4 className="text-3xl font-bold">
         The Problem of today&apos;s cultural development
       </h4>
-      <List />
+      <List type="podcast" size="sm" />
     </Link>
   );
 }

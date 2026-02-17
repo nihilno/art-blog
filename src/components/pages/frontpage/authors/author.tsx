@@ -19,7 +19,7 @@ function Author() {
       </div>
       <article className="space-y-4">
         <h4 className="text-3xl font-bold">Louise Jensen</h4>
-        <List />
+        <List type="author" />
       </article>
       <ArrowUpRight className="absolute right-8 bottom-8 size-8! transition group-hover:size-12! group-hover:translate-x-4" />
     </Link>
