@@ -39,9 +39,18 @@ function ContentData({ type }: { type: "podcast" | "magazine" }) {
         <div className="border-foreground flex items-center justify-between border-b pt-8 pb-12">
           <h5 className="text-lg">Listen On</h5>
           <div className="flex items-center gap-3">
-            <FaSpotify className="size-6 cursor-pointer" />
-            <FaApple className="size-6 cursor-pointer" />
-            <RiSoundcloudLine className="size-6 cursor-pointer" />
+            <FaSpotify
+              className="size-6 cursor-pointer"
+              aria-label="Listen on Spotify"
+            />
+            <FaApple
+              className="size-6 cursor-pointer"
+              aria-label="Listen on Apple Podcasts"
+            />
+            <RiSoundcloudLine
+              className="size-6 cursor-pointer"
+              aria-label="Listen on SoundCloud"
+            />
           </div>
         </div>
       )}
@@ -60,10 +69,16 @@ function ContentData({ type }: { type: "podcast" | "magazine" }) {
         <div className="flex items-center justify-between gap-2">
           <span className="font-bold">Share</span>
           <div className="flex items-center gap-2">
-            <RiInstagramFill className="size-5 cursor-pointer" />
-            <RiTwitterFill className="size-5 cursor-pointer" />
-            <RiYoutubeFill className="size-5 cursor-pointer" />
-          </div>
+            <button type="button" aria-label="Share on Instagram">
+              <RiInstagramFill className="size-5" />
+            </button>
+            <button type="button" aria-label="Share on Twitter">
+              <RiTwitterFill className="size-5" />
+            </button>
+            <button type="button" aria-label="Share on YouTube">
+              <RiYoutubeFill className="size-5" />
+            </button>
+          </div>{" "}
         </div>
       </div>
     </section>
