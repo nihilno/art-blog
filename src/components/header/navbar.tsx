@@ -21,7 +21,11 @@ function Navbar() {
         {LINKS.map(({ label, href }) => (
           <li
             key={href}
-            className={cn(pathname.startsWith(href) ? "underline" : "")}
+            className={cn(
+              pathname === href || pathname.startsWith(`${href}/`)
+                ? "underline"
+                : "",
+            )}
           >
             <Link href={href} aria-label={label}>
               {label}

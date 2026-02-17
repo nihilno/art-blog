@@ -10,9 +10,10 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useNewsletter } from "@/hooks/use-newsletter";
+import { Loader2 } from "lucide-react";
 
 function Newsletter() {
-  const { form, onSubmit } = useNewsletter();
+  const { form, onSubmit, isLoading } = useNewsletter();
 
   return (
     <Form {...form}>
@@ -41,8 +42,8 @@ function Newsletter() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="self-end">
-          Sign up
+        <Button type="submit" className="self-end" disabled={isLoading}>
+          {isLoading ? <Loader2 className="size-4 animate-spin" /> : "Sign up"}
         </Button>
       </form>
     </Form>

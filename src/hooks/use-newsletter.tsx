@@ -11,10 +11,12 @@ export function useNewsletter() {
     resolver: zodResolver(NewsletterSchema),
   });
 
+  const isLoading = form.formState.isSubmitting;
+
   function onSubmit(formData: NewsletterType) {
     toast.success("Subscribed to newsletter!");
     form.reset();
   }
 
-  return { form, onSubmit };
+  return { form, onSubmit, isLoading };
 }

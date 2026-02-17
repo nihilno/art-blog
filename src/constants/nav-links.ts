@@ -1,4 +1,9 @@
-import { Instagram, Twitter, Wifi, Youtube } from "lucide-react";
+import {
+  RiInstagramFill,
+  RiTwitterFill,
+  RiWifiFill,
+  RiYoutubeFill,
+} from "react-icons/ri";
 
 export const LINKS = [
   { label: "Magazines", href: "/magazines" },
@@ -7,10 +12,10 @@ export const LINKS = [
 ];
 
 export const SOCIAL_LINKS = [
-  { label: "Instagram", icon: Instagram },
-  { label: "Twitter", icon: Twitter },
-  { label: "YouTube", icon: Youtube },
-  { label: "Connect", icon: Wifi },
+  { label: "Instagram", icon: RiInstagramFill },
+  { label: "Twitter", icon: RiTwitterFill },
+  { label: "YouTube", icon: RiYoutubeFill },
+  { label: "Connect", icon: RiWifiFill },
 ];
 
 export const FOOTER_LINKS = [

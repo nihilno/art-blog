@@ -41,15 +41,8 @@ function Podcast({ index }: { index: number }) {
             <li>
               <span className="mr-1.5 font-bold">Duration</span> 1h 20 Min
             </li>
-
-            <span
-              className={cn(
-                "flex w-fit items-center gap-2 font-bold uppercase",
-              )}
-            >
+            <span className="flex w-fit items-center gap-2 font-bold uppercase group-hover:underline">
               Listen
-              <span className="tracking-wider group-hover:underline"></span>
-              &nbsp;
               <ArrowRight className="size-5 transition group-hover:translate-x-4" />
             </span>
           </ul>

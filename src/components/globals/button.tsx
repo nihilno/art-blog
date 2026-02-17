@@ -5,11 +5,13 @@ function Button({
   className,
   type = "button",
   variant = "default",
+  disabled,
 }: {
   children: React.ReactNode;
   className?: string;
   type?: "button" | "submit" | "reset";
   variant?: "default" | "secondary";
+  disabled?: boolean;
 }) {
   return (
     <button
@@ -20,6 +22,7 @@ function Button({
           : "bg-foreground text-background hover:bg-foreground/90",
         className,
       )}
+      disabled={disabled}
       type={type}
     >
       {children}

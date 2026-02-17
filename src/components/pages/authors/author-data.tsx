@@ -20,7 +20,7 @@ function AuthorData() {
             <Twitter className="size-4.5" aria-label="Follow on Twitter" />
           </li>
           <li>
-            <Youtube className="size-4.5" aria-label="Follow on Youtube" />
+            <Youtube className="size-4.5" aria-label="Follow on YouTube" />
           </li>
         </ul>
       </div>
