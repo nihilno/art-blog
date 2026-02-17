@@ -13,7 +13,7 @@ function List({
   return (
     <ul
       className={cn(
-        "flex flex-col gap-2 md:flex-row md:items-center md:gap-8",
+        "flex flex-col gap-2 md:flex-row md:items-center md:gap-4 lg:gap-8",
         size === "sm" && "text-sm",
       )}
     >

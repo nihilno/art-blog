@@ -26,7 +26,7 @@ function Magazine({
     >
       <div
         className={cn(
-          "relative size-60 shrink-0 place-self-center transition group-hover:scale-105 group-hover:shadow-xl",
+          "relative size-60 shrink-0 place-self-center transition group-hover:scale-105 group-hover:shadow-xl sm:place-self-start",
           type === "compact" && "size-37.5",
         )}
       >

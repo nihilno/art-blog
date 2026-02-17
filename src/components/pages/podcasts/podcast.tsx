@@ -12,7 +12,7 @@ function Podcast({ index }: { index: number }) {
     <Link
       href="/podcasts/1"
       className={cn(
-        "border-foreground group relative flex flex-col items-center gap-8 transition hover:-translate-1 md:flex-row md:gap-16",
+        "border-foreground group relative flex flex-col gap-8 transition hover:-translate-1 lg:flex-row lg:items-center lg:gap-16",
         !isLast && "border-b pb-12",
       )}
     >
@@ -29,7 +29,7 @@ function Podcast({ index }: { index: number }) {
           priority={true}
         />
       </div>
-      <article className="flex w-full flex-col justify-between gap-8 md:flex-row md:items-center md:gap-0">
+      <article className="flex w-full flex-col justify-between gap-8 lg:flex-row lg:items-center lg:gap-0">
         <h2 className="line-clamp-2 max-w-[22ch] text-3xl font-bold capitalize">
           Don&apos;t close your eyes
         </h2>
@@ -41,19 +41,6 @@ function Podcast({ index }: { index: number }) {
             <ArrowRight className="size-5 transition group-hover:translate-x-4" />
           </span>
         </section>
-        {/* <ul className="flex items-center gap-8">
-            <li>
-              <span className="mr-1.5 font-bold">Date</span>{" "}
-              {format(new Date(), "d. MMMM yyyy")}
-            </li>
-            <li>
-              <span className="mr-1.5 font-bold">Duration</span> 1h 20 Min
-            </li>
-            <span className="flex w-fit items-center gap-2 font-bold uppercase group-hover:underline">
-              Listen
-              <ArrowRight className="size-5 transition group-hover:translate-x-4" />
-            </span>
-          </ul> */}
       </article>
     </Link>
   );

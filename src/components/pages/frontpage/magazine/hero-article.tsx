@@ -5,12 +5,12 @@ import Image from "next/image";
 
 function HeroArticle() {
   return (
-    <section className="border-foreground mt-8 space-y-8 rounded-md border border-dashed p-2">
-      <article className="mt-8 grid grid-cols-1 gap-4 md:mt-16 md:grid-cols-2">
+    <section className="border-foreground mt-8 space-y-8 rounded-lg border border-dashed p-2 sm:border-0">
+      <article className="mt-8 grid grid-cols-1 gap-4 lg:mt-16 lg:grid-cols-2">
         <h2 className="text-3xl leading-none font-bold uppercase sm:text-[5vw]">
           Don&apos;t close your eyes
         </h2>
-        <div className="flex flex-col justify-between gap-2 text-sm md:text-base">
+        <div className="flex flex-col justify-between gap-2 text-sm lg:text-base">
           {/* blog description */}
           <p className="line-clamp-4 font-light">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
@@ -24,13 +24,14 @@ function HeroArticle() {
             Non.
           </p>
 
-          <section className="mt-8 flex justify-between md:mt-auto">
-            <List />
+          <List size="sm" compact={true} />
+
+          <div className="mt-8 flex items-center justify-between">
+            <LinkBtn href={`/magazines/${1}`} className="mt-4 lg:mt-0">
+              Read More
+            </LinkBtn>
             <Label label="Art" />
-          </section>
-          <LinkBtn href={`/magazines/${1}`} className="mt-4 md:mt-0">
-            Read More
-          </LinkBtn>
+          </div>
         </div>
       </article>
 
