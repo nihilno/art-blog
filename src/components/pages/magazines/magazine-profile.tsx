@@ -6,7 +6,7 @@ function MagazineProfile() {
   return (
     <section>
       <MagazineHero />
-      <div className="mx-auto mt-24 grid max-w-7xl grid-cols-[350px_1fr] gap-24">
+      <div className="mx-auto mt-24 grid max-w-7xl grid-cols-1 gap-24 lg:grid-cols-[350px_1fr]">
         <ContentData type="magazine" />
         <ContentAbout type="magazine" />
       </div>

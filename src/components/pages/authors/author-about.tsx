@@ -1,7 +1,7 @@
 function AuthorAbout() {
   return (
     <article>
-      <h1 className="max-w-[10ch] text-8xl font-extrabold tracking-wide">
+      <h1 className="max-w-[10ch] text-4xl font-extrabold tracking-wide sm:text-6xl md:text-8xl">
         Louise Jensen
       </h1>
       <section className="mt-8 space-y-12">

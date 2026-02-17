@@ -1,7 +1,7 @@
 function HeroTitle() {
   return (
-    <article className="grid grid-cols-2">
-      <h1 className="max-w-[10ch] text-8xl leading-24 font-bold">
+    <article className="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <h1 className="max-w-[10ch] text-5xl leading-12 font-bold sm:text-6xl sm:leading-18 md:text-8xl md:leading-24">
         Hope Dies Last
       </h1>
       <p>

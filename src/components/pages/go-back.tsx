@@ -15,7 +15,7 @@ function GoBack({ label }: { label: string }) {
   }
 
   return (
-    <div className="mt-8 flex items-center justify-between">
+    <div className="mt-8 flex flex-col-reverse justify-between gap-2 sm:flex-row sm:items-center">
       <button
         type="button"
         onClick={handleBack}

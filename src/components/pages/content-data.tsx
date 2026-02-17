@@ -18,7 +18,7 @@ function ContentData({ type }: { type: "magazine" | "podcast" }) {
         <div
           className={cn(
             "relative aspect-square",
-            type === "podcast" ? "w-[350px]" : "w-20",
+            type === "podcast" ? "sm:w-[350px]" : "w-20",
           )}
         >
           <Image

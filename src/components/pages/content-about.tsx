@@ -8,7 +8,7 @@ function ContentAbout({ type }: { type: "magazine" | "podcast" }) {
       )}
       <div className="mt-4">
         {type === "podcast" && (
-          <h1 className="max-w-[15ch] text-8xl font-extrabold tracking-wide">
+          <h1 className="max-w-[15ch] text-4xl font-extrabold tracking-wide sm:text-6xl md:text-8xl">
             Save the world from ourselves!
           </h1>
         )}
@@ -36,9 +36,9 @@ function ContentAbout({ type }: { type: "magazine" | "podcast" }) {
           </p>
 
           <blockquote className="border-foreground grid grid-cols-[min-content_1fr] gap-x-8 border-t border-b py-12 leading-16">
-            <ImQuotesLeft className="size-12" />
+            <ImQuotesLeft className="size-8 md:size-12" />
             <div className="space-y-2">
-              <h2 className="text-5xl font-bold normal-case">
+              <h2 className="text-2xl font-bold normal-case sm:text-3xl md:text-5xl">
                 The greatest glory in living lies not in never falling, but in
                 rising every time we fall.
               </h2>

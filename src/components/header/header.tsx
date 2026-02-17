@@ -9,7 +9,7 @@ function Header() {
       <div className="hidden md:block">
         <Navbar />
       </div>
-      <Menu className="size-8 md:hidden" />
+      <Menu className="size-8 md:hidden" aria-label="Open menu" />
     </header>
   );
 }

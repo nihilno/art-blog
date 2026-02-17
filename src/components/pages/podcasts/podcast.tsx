@@ -17,7 +17,7 @@ function Podcast({ index }: { index: number }) {
       )}
     >
       <h4 className="self-start text-xl">
-        {index < 10 ? `0${index + 1}` : index + 1}
+        {index + 1 < 10 ? `0${index + 1}` : index + 1}
       </h4>
 
       <div className="relative size-60 shrink-0 transition group-hover:scale-105 group-hover:shadow-xl">
