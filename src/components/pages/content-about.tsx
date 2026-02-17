@@ -1,13 +1,17 @@
 import { ImQuotesLeft } from "react-icons/im";
 
-function PodcastAbout() {
+function ContentAbout({ type }: { type: "magazine" | "podcast" }) {
   return (
     <section>
-      <p className="font-bold uppercase">Episode {"01"}</p>
+      {type === "podcast" && (
+        <p className="font-bold uppercase">Episode {"01"}</p>
+      )}
       <div className="mt-4">
-        <h1 className="max-w-[15ch] text-8xl font-extrabold tracking-wide">
-          Save the world from ourselves!
-        </h1>
+        {type === "podcast" && (
+          <h1 className="max-w-[15ch] text-8xl font-extrabold tracking-wide">
+            Save the world from ourselves!
+          </h1>
+        )}
         <article className="mt-8 space-y-8">
           <p className="text-lg font-medium">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -76,4 +80,4 @@ function PodcastAbout() {
   );
 }
 
-export default PodcastAbout;
+export default ContentAbout;

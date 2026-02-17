@@ -1,6 +1,6 @@
 import Label from "@/components/globals/label";
 import LinkBtn from "@/components/globals/link";
-import { format } from "date-fns";
+import List from "@/components/globals/list";
 import Image from "next/image";
 
 function HeroArticle() {
@@ -25,20 +25,7 @@ function HeroArticle() {
           </p>
 
           <section className="mt-auto flex justify-between">
-            <ul className="flex items-center gap-8">
-              <li>
-                <span className="mr-1.5 font-bold">Text</span> Jakob Polowy
-              </li>
-              <li>
-                <span className="mr-1.5 font-bold">Date</span>{" "}
-                {format(new Date(), "d. MMMM yyyy")}
-              </li>
-
-              <li>
-                <span className="mr-1.5 font-bold">Duration</span> 1 Min
-              </li>
-            </ul>
-
+            <List />
             <Label label="Art" />
           </section>
           <LinkBtn href={`/magazines/${1}`}>Read More</LinkBtn>

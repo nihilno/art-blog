@@ -1,3 +1,4 @@
+import List from "@/components/globals/list";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -28,22 +29,13 @@ function Author({ index }: { index: number }) {
           Lorem, ipsum.
         </h2>
 
-        <section className="flex justify-between">
-          <ul className="flex items-center gap-8">
-            <li>
-              <span className="mr-1.5 font-bold">Job</span> Artist
-            </li>
-            <li>
-              <span className="mr-1.5 font-bold">City</span> Berlin
-            </li>
-            <span className="group flex w-fit items-center gap-2 font-bold uppercase">
-              <span className="tracking-wider group-hover:underline">
-                About
-              </span>
-              &nbsp;
-              <ArrowRight className="size-5 transition group-hover:translate-x-4" />
-            </span>
-          </ul>
+        <section className="flex justify-between gap-8">
+          <List />
+          <span className="group flex w-fit items-center gap-2 font-bold uppercase">
+            <span className="tracking-wider group-hover:underline">About</span>
+            &nbsp;
+            <ArrowRight className="size-5 transition group-hover:translate-x-4" />
+          </span>
         </section>
       </article>
     </Link>

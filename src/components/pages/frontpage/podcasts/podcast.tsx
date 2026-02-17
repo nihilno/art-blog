@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+import List from "@/components/globals/list";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -20,15 +20,7 @@ function Podcast({ index }: { index: number }) {
       <h4 className="text-3xl font-bold">
         The Problem of today&apos;s cultural development
       </h4>
-      <ul className="mt-12 flex gap-8">
-        <li className="text-sm">
-          <span className="font-semibold">Date</span>&nbsp;
-          {format(new Date(), "dd MMMM yyyy")}
-        </li>
-        <li className="text-sm">
-          <span className="font-semibold">Duration</span>&nbsp; 1h 20 Min
-        </li>
-      </ul>
+      <List />
     </Link>
   );
 }

@@ -1,4 +1,5 @@
 import Label from "@/components/globals/label";
+import List from "@/components/globals/list";
 import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
@@ -40,14 +41,7 @@ function Magazine() {
         </div>
 
         <section className="flex justify-between">
-          <ul className="flex items-center gap-8">
-            <li>
-              <span className="mr-1.5 font-bold">Text</span> Jakob Polowy
-            </li>
-            <li>
-              <span className="mr-1.5 font-bold">Duration</span> 1 Min
-            </li>
-          </ul>
+          <List />
         </section>
       </article>
     </Link>

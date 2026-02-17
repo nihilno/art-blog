@@ -1,3 +1,4 @@
+import List from "@/components/globals/list";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,14 +19,7 @@ function Author() {
       </div>
       <article className="space-y-4">
         <h4 className="text-3xl font-bold">Louise Jensen</h4>
-        <ul className="flex gap-8">
-          <li className="text-sm">
-            <span className="font-semibold">Job</span>&nbsp; Artist
-          </li>
-          <li className="text-sm">
-            <span className="font-semibold">City</span>&nbsp; Berlin
-          </li>
-        </ul>
+        <List />
       </article>
       <ArrowUpRight className="absolute right-8 bottom-8 size-8! transition group-hover:size-12! group-hover:translate-x-4" />
     </Link>

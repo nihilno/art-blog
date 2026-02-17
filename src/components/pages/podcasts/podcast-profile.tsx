@@ -1,11 +1,11 @@
-import PodcastAbout from "./podcast-about";
-import PodcastData from "./podcast-data";
+import ContentAbout from "@/components/pages/content-about";
+import ContentData from "@/components/pages/content-data";
 
 function PodcastProfile() {
   return (
     <div className="mx-auto grid max-w-7xl grid-cols-[350px_1fr] gap-24">
-      <PodcastData />
-      <PodcastAbout />
+      <ContentData type="podcast" />
+      <ContentAbout type="podcast" />
     </div>
   );
 }
