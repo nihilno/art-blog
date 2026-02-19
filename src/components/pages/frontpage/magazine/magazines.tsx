@@ -1,11 +1,14 @@
 import LinkBtn from "@/components/globals/link";
+import { getArticles } from "@/lib/data/get-articles";
 import Article from "./magazine";
 
-function Magazines() {
+async function Magazines() {
+  const articles = await getArticles();
+
   return (
     <section className="border-foreground flex flex-col gap-12 pb-16">
-      {Array.from({ length: 6 }).map((_, index) => {
-        return <Article key={index} />;
+      {articles.map((article) => {
+        return <Article key={article.id} article={article} />;
       })}
 
       <LinkBtn href="/magazines" className="mt-4">

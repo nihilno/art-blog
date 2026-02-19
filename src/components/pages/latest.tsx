@@ -1,6 +1,4 @@
 import LinkBtn from "../globals/link";
-import Podcast from "./frontpage/podcasts/podcast";
-import Magazine from "./magazines/magazine";
 
 function Latest({
   label,
@@ -18,13 +16,13 @@ function Latest({
         <LinkBtn href={href}>See All</LinkBtn>
       </article>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {Array.from({ length: 3 }).map((_, i) =>
+        {/* {Array.from({ length: 3 }).map((_, i) =>
           type === "podcast" ? (
             <Podcast index={i} key={i} />
           ) : (
             <Magazine key={i} />
           ),
-        )}
+        )} */}
       </div>
     </section>
   );

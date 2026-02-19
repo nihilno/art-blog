@@ -5,10 +5,18 @@ function List({
   type = "magazine",
   size = "base",
   compact = false,
+  details,
 }: {
   type?: "magazine" | "podcast" | "author";
   size?: "sm" | "base";
   compact?: boolean;
+  details?: {
+    name?: string;
+    createdAt?: Date;
+    durationInMinutes?: number;
+    occupation?: string;
+    city?: string;
+  };
 }) {
   return (
     <ul
@@ -20,23 +28,28 @@ function List({
       {type === "author" ? (
         <>
           <li>
-            <span className="mr-1.5 font-bold">Job</span>Artist
+            <span className="mr-1.5 font-bold">Job</span>
+            {details?.occupation || "Not provided"}
           </li>
           <li>
-            <span className="mr-1.5 font-bold">City</span>Berlin
+            <span className="mr-1.5 font-bold">City</span>
+            {details?.city || "Not provided"}
           </li>
         </>
       ) : (
         <>
           {type === "magazine" && (
             <li>
-              <span className="mr-1.5 font-bold">Text</span>Jakob Polowy
+              <span className="mr-1.5 font-bold">Text</span>
+              {details?.name || "Anonymous Author"}
             </li>
           )}
           {!compact && (
             <li>
               <span className="mr-1.5 font-bold">Date</span>
-              {format(new Date(), "d. MMMM yyyy")}
+              {details?.createdAt
+                ? format(details?.createdAt, "d. MMMM yyyy")
+                : "Unknown Date"}
             </li>
           )}
 
@@ -44,7 +57,7 @@ function List({
             <span className="mr-1.5 font-bold">
               {type === "podcast" ? "Duration" : "Read"}
             </span>
-            1 Min
+            {details?.durationInMinutes || "--"} min
           </li>
         </>
       )}

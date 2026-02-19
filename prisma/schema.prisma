@@ -16,6 +16,7 @@ model Post {
   imageUrl String
   durationInMinutes Int
   label String
+  slug String @unique
 
   instagramLink String?
   twitterLink String?
@@ -30,6 +31,8 @@ model Post {
   author Author @relation(fields: [authorId], references: [id] , onDelete: Cascade)
 
   createdAt DateTime @default(now())
+
+  @@index([type, createdAt])
 }
 
 enum Type {
@@ -40,13 +43,15 @@ enum Type {
 model Author {
   id Int @id @default(autoincrement())
   name String
+  imageUrl String
+  slug String @unique
   occupation String
-  location String
+  city String
   description String
   content String
   instagramLink String?
-  TwitterLink String?
-  YoutubeLink String?
+  twitterLink String?
+  youtubeLink String?
 
   posts Post[]
   
