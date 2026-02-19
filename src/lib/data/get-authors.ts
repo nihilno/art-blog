@@ -12,7 +12,7 @@ export async function getLatestAuthors() {
 
 export async function getAllAuthors() {
   const authors = await prisma.author.findMany({
-    orderBy: { name: "desc" },
+    orderBy: { name: "asc" },
   });
   return authors;
 }

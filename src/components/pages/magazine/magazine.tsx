@@ -12,13 +12,7 @@ function Article({
   type = "regular",
   index,
   length,
-}: {
-  article: Post & { author: { name: string } };
-  className?: string;
-  type?: "regular" | "compact";
-  index: number;
-  length: number;
-}) {
+}: ArticleProps) {
   const {
     slug,
     imageUrl,
@@ -40,7 +34,7 @@ function Article({
         "border-foreground group relative flex flex-col gap-16 transition hover:-translate-1 lg:flex-row",
         type === "regular" && "border-b pb-12",
         type === "compact" && "border p-6",
-        isLast && "border-0",
+        isLast && type === "regular" && "border-b-0",
         className,
       )}
     >

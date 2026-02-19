@@ -6,7 +6,7 @@ import { RiSoundcloudLine } from "react-icons/ri";
 
 import { RiInstagramFill, RiTwitterFill, RiYoutubeFill } from "react-icons/ri";
 
-function ContentData({ type }: { type: "magazine" | "podcast" }) {
+function ContentData({ type }: ContentType) {
   return (
     <section>
       <div

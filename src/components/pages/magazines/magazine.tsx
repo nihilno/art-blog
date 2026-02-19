@@ -1,16 +1,11 @@
 import Label from "@/components/globals/label";
 import List from "@/components/globals/list";
-import { Post } from "@/generated/prisma/client";
 import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-function Magazine({
-  article,
-}: {
-  article: Post & { author: { name: string } };
-}) {
+function Magazine({ article }: { article: PostWithAuthor }) {
   const {
     title,
     slug,

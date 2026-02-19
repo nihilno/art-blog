@@ -1,14 +1,6 @@
 import LinkBtn from "../globals/link";
 
-function Latest({
-  label,
-  type,
-  href,
-}: {
-  label: string;
-  type: "podcast" | "magazine";
-  href: string;
-}) {
+function Latest({ label, type, href }: LatestProps) {
   return (
     <section className="border-foreground space-y-24 border-t pt-12">
       <article className="flex flex-col items-center justify-between">

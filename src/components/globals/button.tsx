@@ -6,13 +6,7 @@ function Button({
   type = "button",
   variant = "default",
   disabled,
-}: {
-  children: React.ReactNode;
-  className?: string;
-  type?: "button" | "submit" | "reset";
-  variant?: "default" | "secondary";
-  disabled?: boolean;
-}) {
+}: ButtonProps) {
   return (
     <button
       className={cn(

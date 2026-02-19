@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-function Label({ label, className }: { label: string; className?: string }) {
+function Label({ label, className }: LabelProps) {
   return (
     <span
       className={cn(

@@ -1,6 +1,6 @@
 import { ImQuotesLeft } from "react-icons/im";
 
-function ContentAbout({ type }: { type: "magazine" | "podcast" }) {
+function ContentAbout({ type }: ContentType) {
   return (
     <section>
       {type === "podcast" && (

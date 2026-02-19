@@ -1,21 +1,12 @@
 import List from "@/components/globals/list";
-import { Author as AuthorType } from "@/generated/prisma/client";
 import { cn } from "@/lib/utils";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-type Props = {
-  author: AuthorType;
-  index?: number;
-  length?: number;
-  type: "latest" | "all";
-};
-
-function Author({ author, index, length, type }: Props) {
+function Author({ author, index, length, type }: AuthorProps) {
   const { imageUrl, name, occupation, city, slug } = author;
   const listDetails = { occupation, city };
-  const isLast = index === length! - 1;
 
   if (type === "latest") {
     return (
@@ -36,6 +27,9 @@ function Author({ author, index, length, type }: Props) {
       </Link>
     );
   }
+
+  const isLast =
+    index !== undefined && length !== undefined && index === length - 1;
 
   return (
     <Link

@@ -1,4 +1,4 @@
-function Title({ label, wrapper }: { label: string; wrapper?: boolean }) {
+function Title({ label, wrapper }: TitleProps) {
   return (
     <article>
       <h1 className="text-center text-5xl leading-32 font-extrabold whitespace-nowrap select-none sm:text-[12vw] sm:leading-[14vw]">

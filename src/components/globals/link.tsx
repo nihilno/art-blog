@@ -2,15 +2,7 @@ import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-function LinkBtn({
-  children,
-  className,
-  href,
-}: {
-  children: React.ReactNode;
-  className?: string;
-  href: string;
-}) {
+function LinkBtn({ children, className, href }: LinkProps) {
   return (
     <Link
       className={cn(

@@ -1,7 +1,7 @@
 import Title from "@/components/globals/title";
 import Authors from "@/components/pages/authors/authors";
-import Content from "@/components/pages/frontpage/magazine/content";
-import FeaturedArticle from "@/components/pages/frontpage/magazine/hero-article";
+import Content from "@/components/pages/magazine/content";
+import FeaturedArticle from "@/components/pages/magazine/hero-article";
 import Podcasts from "@/components/pages/podcasts/podcasts";
 import { Suspense } from "react";
 

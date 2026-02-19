@@ -12,7 +12,7 @@ function Podcast({
   index,
   length,
 }: {
-  type: "latest" | "all";
+  type?: "latest" | "all";
   podcast: Post;
   index: number;
   length: number;

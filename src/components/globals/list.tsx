@@ -6,18 +6,7 @@ function List({
   size = "base",
   compact = false,
   details,
-}: {
-  type?: "magazine" | "podcast" | "author";
-  size?: "sm" | "base";
-  compact?: boolean;
-  details?: {
-    name?: string;
-    createdAt?: Date;
-    durationInMinutes?: number;
-    occupation?: string;
-    city?: string;
-  };
-}) {
+}: ListProps) {
   return (
     <ul
       className={cn(
