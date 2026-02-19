@@ -32,3 +32,18 @@ export async function getAllArticles() {
   });
   return articles;
 }
+
+export async function getArticleBySlug(slug: string) {
+  const article = await prisma.post.findUnique({
+    where: { slug },
+    include: {
+      author: {
+        select: {
+          name: true,
+          imageUrl: true,
+        },
+      },
+    },
+  });
+  return article;
+}

@@ -49,6 +49,7 @@ model Author {
   city String
   description String
   content String
+  
   instagramLink String?
   twitterLink String?
   youtubeLink String?

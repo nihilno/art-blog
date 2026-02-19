@@ -24,7 +24,6 @@ function Magazine({ article }: { article: PostWithAuthor }) {
       className="border-foreground group flex flex-col items-center border px-10 pb-12 transition hover:-translate-y-4"
     >
       <div className="flex w-full items-center justify-between gap-1 py-10">
-        {/* <p>{format(new Date(createdAt), "d. MMMM yyyy")}</p> */}
         2025
         <Label
           label={label}

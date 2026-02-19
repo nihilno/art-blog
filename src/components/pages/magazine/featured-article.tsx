@@ -8,10 +8,7 @@ function FeaturedArticle() {
     <aside className="space-y-8">
       <>
         <span className="font-bold uppercase">Printmagazine</span>
-        <h3 className="mt-2.5 text-4xl font-bold">
-          {/* {format(new Date(), "MM/yyyy")} */}
-          2025
-        </h3>
+        <h3 className="mt-2.5 text-4xl font-bold">2025</h3>
       </>
       <div className="space-y-4">
         <Image

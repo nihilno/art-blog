@@ -1,8 +1,14 @@
 import ContentAbout from "@/components/pages/content-about";
 import ContentData from "@/components/pages/content-data";
+import { getArticleBySlug } from "@/lib/data/get-articles";
+import { cacheLife } from "next/cache";
 import MagazineHero from "./magazine-hero";
 
-function MagazineProfile() {
+async function MagazineProfile({ slug }: { slug: string }) {
+  "use cache";
+  cacheLife("days");
+  const article = await getArticleBySlug(slug);
+
   return (
     <section>
       <MagazineHero />

@@ -61,7 +61,6 @@ declare global {
 
   type LatestProps = {
     label: string;
-    type: "podcast" | "magazine";
     href: string;
   };
 

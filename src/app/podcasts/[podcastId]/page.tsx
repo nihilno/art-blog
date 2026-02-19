@@ -7,7 +7,7 @@ export default function PodcastPage() {
     <section className="space-y-24">
       <GoBack label="Podcast" />
       <PodcastProfile />
-      <Latest label="Latest Episodes" type="podcast" href="/podcasts" />
+      <Latest label="Latest Episodes" href="/podcasts" />
     </section>
   );
 }
