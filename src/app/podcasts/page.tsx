@@ -5,7 +5,7 @@ export default function PodcastPage() {
   return (
     <section>
       <Title label="Podcasts" />
-      <Podcasts />
+      <Podcasts type="all" />
     </section>
   );
 }

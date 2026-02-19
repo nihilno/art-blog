@@ -10,10 +10,14 @@ function Article({
   article,
   className,
   type = "regular",
+  index,
+  length,
 }: {
   article: Post & { author: { name: string } };
   className?: string;
   type?: "regular" | "compact";
+  index: number;
+  length: number;
 }) {
   const {
     slug,
@@ -27,6 +31,7 @@ function Article({
   } = article;
 
   const listDetails = { name, createdAt, durationInMinutes };
+  const isLast = index === length - 1;
 
   return (
     <Link
@@ -35,6 +40,7 @@ function Article({
         "border-foreground group relative flex flex-col gap-16 transition hover:-translate-1 lg:flex-row",
         type === "regular" && "border-b pb-12",
         type === "compact" && "border p-6",
+        isLast && "border-0",
         className,
       )}
     >
@@ -46,7 +52,7 @@ function Article({
       >
         <Image
           src={imageUrl}
-          alt="Featured Blog"
+          alt={title}
           fill
           className="object-cover"
           quality={50}

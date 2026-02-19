@@ -1,8 +1,8 @@
 import Title from "@/components/globals/title";
-import Authors from "@/components/pages/frontpage/authors/authors";
+import Authors from "@/components/pages/authors/authors";
 import Content from "@/components/pages/frontpage/magazine/content";
 import FeaturedArticle from "@/components/pages/frontpage/magazine/hero-article";
-import Podcasts from "@/components/pages/frontpage/podcasts/podcasts";
+import Podcasts from "@/components/pages/podcasts/podcasts";
 import { Suspense } from "react";
 
 export default function FrontPage() {
@@ -18,14 +18,14 @@ export default function FrontPage() {
             <div className="h-96 w-full animate-pulse rounded-lg bg-gray-300" />
           }
         >
-          <Podcasts />
+          <Podcasts type="latest" />
         </Suspense>
         <Suspense
           fallback={
             <div className="h-96 w-full animate-pulse rounded-lg bg-gray-300" />
           }
         >
-          <Authors />
+          <Authors type="latest" />
         </Suspense>
       </div>
     </section>

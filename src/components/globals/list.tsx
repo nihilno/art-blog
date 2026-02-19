@@ -57,7 +57,7 @@ function List({
             <span className="mr-1.5 font-bold">
               {type === "podcast" ? "Duration" : "Read"}
             </span>
-            {details?.durationInMinutes || "--"} min
+            {details?.durationInMinutes ?? "--"} min
           </li>
         </>
       )}

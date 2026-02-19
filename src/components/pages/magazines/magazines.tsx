@@ -1,12 +1,15 @@
 import LinkBtn from "@/components/globals/link";
+import { getAllArticles } from "@/lib/data/get-articles";
 import Magazine from "./magazine";
 
-function Magazines() {
+async function Magazines() {
+  const articles = await getAllArticles();
+
   return (
     <section className="flex flex-col gap-12">
       <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {Array.from({ length: 15 }).map((_, i) => (
-          <Magazine key={i} />
+        {articles.map((article) => (
+          <Magazine key={article.id} article={article} />
         ))}
       </div>
 
