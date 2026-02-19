@@ -1,5 +1,4 @@
 import Button from "@/components/globals/button";
-import { format } from "date-fns";
 import Image from "next/image";
 import MostPopular from "./most-popular";
 import Newsletter from "./newsletter";
@@ -10,7 +9,8 @@ function FeaturedArticle() {
       <>
         <span className="font-bold uppercase">Printmagazine</span>
         <h3 className="mt-2.5 text-4xl font-bold">
-          {format(new Date(), "MM/yyyy")}
+          {/* {format(new Date(), "MM/yyyy")} */}
+          2025
         </h3>
       </>
       <div className="space-y-4">

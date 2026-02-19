@@ -1,8 +1,11 @@
 import LinkBtn from "@/components/globals/link";
 import { getAllArticles } from "@/lib/data/get-articles";
+import { cacheLife } from "next/cache";
 import Magazine from "./magazine";
 
 async function Magazines() {
+  "use cache";
+  cacheLife("hours");
   const articles = await getAllArticles();
 
   return (

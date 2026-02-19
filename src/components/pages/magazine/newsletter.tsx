@@ -43,8 +43,15 @@ function Newsletter() {
           )}
         />
         <Button type="submit" className="self-end" disabled={isLoading}>
-          {isLoading ? <Loader2 className="size-4 animate-spin" /> : "Sign up"}
-        </Button>
+          {isLoading ? (
+            <>
+              <Loader2 className="size-4 animate-spin" aria-hidden="true" />
+              <span className="sr-only">Submitting...</span>
+            </>
+          ) : (
+            "Sign up"
+          )}
+        </Button>{" "}
       </form>
     </Form>
   );

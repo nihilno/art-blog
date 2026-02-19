@@ -1,8 +1,11 @@
 import Subtitle from "@/components/globals/subtitle";
 import { getAllPodcasts } from "@/lib/data/get-podcasts";
+import { cacheLife } from "next/cache";
 import Podcast from "./podcast";
 
 async function Podcasts({ type }: { type: "latest" | "all" }) {
+  "use cache";
+  cacheLife("hours");
   const podcasts = await getAllPodcasts();
 
   return type === "latest" ? (

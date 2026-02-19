@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { format } from "date-fns";
 import Image from "next/image";
 import { FaApple, FaSpotify } from "react-icons/fa";
 import { RiSoundcloudLine } from "react-icons/ri";
@@ -58,7 +57,8 @@ function ContentData({ type }: ContentType) {
       <div className="mt-8 space-y-5">
         <p className="flex items-center justify-between gap-2">
           <span className="font-bold">Date</span>
-          {format(new Date(), "MMMM dd, yyyy")}
+          {/* {format(new Date(), "MMMM dd, yyyy")} */}
+          2025
         </p>
         <p className="flex items-center justify-between gap-2">
           <span className="font-bold">

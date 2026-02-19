@@ -1,8 +1,11 @@
 import Subtitle from "@/components/globals/subtitle";
 import Author from "@/components/pages/authors/author";
 import { getAllAuthors } from "@/lib/data/get-authors";
+import { cacheLife } from "next/cache";
 
 async function Authors({ type }: { type: "latest" | "all" }) {
+  "use cache";
+  cacheLife("hours");
   const authors = await getAllAuthors();
 
   return type === "latest" ? (

@@ -1,11 +1,11 @@
 "use client";
 
+import SocialLinks from "@/components/globals/social-links";
 import { LINKS } from "@/constants/nav-links";
 import { cn } from "@/lib/utils";
 import { HomeIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import SocialLinks from "../globals/social-links";
 
 function Navbar() {
   const pathname = usePathname();

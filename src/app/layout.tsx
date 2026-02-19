@@ -4,6 +4,7 @@ import Providers from "@/components/providers";
 import { inter } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -22,7 +23,9 @@ export default function RootLayout({
         className={cn("flex min-h-dvh flex-col antialiased", inter.className)}
       >
         <Providers>
-          <Header />
+          <Suspense>
+            <Header />
+          </Suspense>
           <main className="relative container mx-auto flex-1 px-2 font-light">
             {children}
           </main>

@@ -1,6 +1,5 @@
 import Label from "@/components/globals/label";
 import List from "@/components/globals/list";
-import { Post } from "@/generated/prisma/client";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";

@@ -1,4 +1,4 @@
-import { Post } from "@/generated/prisma/client";
+import { Author, Post } from "@/generated/prisma/client";
 
 export {};
 
@@ -43,7 +43,7 @@ declare global {
   type TitleProps = { label: string; wrapper?: boolean };
 
   type AuthorProps = {
-    author: AuthorType;
+    author: Author;
     index?: number;
     length?: number;
     type: "latest" | "all";
