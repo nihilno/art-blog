@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Post {
+  id String @id @default(uuid())
+  type Type
+
+  title String
+  description String
+  imageUrl String
+  durationInMinutes Int
+  label String
+
+  instagramLink String?
+  twitterLink String?
+  youtubeLink String?
+
+  spotifyLink String?
+  applePodcastLink String?
+  soundCloudLink String?
+  episodeNumber Int?
+
+  authorId Int
+  author Author @relation(fields: [authorId], references: [id] , onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+}
+
+enum Type {
+  ARTICLE
+  PODCAST
+}
+
+model Author {
+  id Int @id @default(autoincrement())
+  name String
+  occupation String
+  location String
+  description String
+  content String
+  instagramLink String?
+  TwitterLink String?
+  YoutubeLink String?
+
+  posts Post[]
+  
+  createdAt DateTime @default(now())
+}

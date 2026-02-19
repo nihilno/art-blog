@@ -7,11 +7,10 @@ import React from "react";
 
 function Magazine({
   className,
-  isLast = false,
   type = "regular",
 }: {
   className?: string;
-  isLast?: boolean;
+
   type?: "regular" | "compact";
 }) {
   return (
@@ -19,7 +18,7 @@ function Magazine({
       href={`/magazines/1`}
       className={cn(
         "border-foreground group relative flex flex-col gap-16 transition hover:-translate-1 lg:flex-row",
-        type === "regular" && !isLast && "border-b pb-12",
+        // type === "regular" && !isLast && "border-b pb-12",
         type === "compact" && "border p-6",
         className,
       )}
@@ -31,7 +30,7 @@ function Magazine({
         )}
       >
         <Image
-          src="/sample/featured-blog.png"
+          src="/sample/articles/image-1.png"
           alt="Featured Blog"
           fill
           className="object-cover"
@@ -40,20 +39,19 @@ function Magazine({
       </div>
       <article
         className={cn(
-          "border-foreground flex flex-col gap-8 pr-4 lg:gap-0",
+          "border-foreground flex w-full flex-col gap-8 pr-4 lg:gap-0",
           type === "compact" && "my-auto h-fit gap-4",
         )}
       >
         <div className="space-y-4">
-          <h2 className="text-3xl font-bold capitalize">
-            Don&apos;t close your eyes
-          </h2>
+          <h2 className="text-3xl font-bold capitalize">Sample Title</h2>
           {type === "regular" && (
             <p className="line-clamp-4 text-sm font-light md:text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-              corporis animi, sapiente minima aperiam magni enim dolores veniam,
-              sunt nostrum esse reiciendis porro minus voluptatibus, maiores
-              autem sit tempore odit.
+              Sample description for the article. This is just a placeholder
+              text to demonstrate how the description will look like in the
+              regular type of magazine article. It should be concise and
+              informative, giving readers an idea of what the article is about
+              without revealing too much.
             </p>
           )}
         </div>
